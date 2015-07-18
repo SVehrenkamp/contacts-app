@@ -6,8 +6,38 @@
 -->
 <ion-view view-title="{{contact['Company Name']}}">
   <ion-content class="padding">
-    <p>
-      {{contact['Mobile Phone']}}
-    </p>
+    <h2>{{contact['Scope of Work']}}<small> <em>{{contact.City}}, {{contact.State}}</em></small></h2>
+    <div class="contact-card">
+    	<h3 ng-if="contact.Contact">Contact: {{contact.Contact}}</h3>
+    	<h3 ng-if="contact.Role">Role: {{contact.Role}}</h3>
+    	<h4 ng-if="contact.Email">Email: {{contact.Email}}</h4>
+    	<h4 ng-if="contact['Work Phone']">Work Phone: {{contact['Work Phone']}} </h4>
+    	<h4 ng-if="contact['Mobile Phone']">Mobile Phone: {{contact['Mobile Phone']}}</h4>
+    	<h4 ng-if="contact.Fax">Fax: {{contact.Fax}}</h4>
+    </div>
+
+    <a 
+    ng-if="contact['Work Phone']" 
+    class="button button-block button-balanced icon-left ion-ios-telephone"
+    href="tel:{{contact['Work Phone']}}"
+    >
+    	<b>Call {{contact.Contact}}'s Work Phone</b>
+    </a>
+
+    <a 
+    ng-if="contact['Mobile Phone']" 
+    class="button button-block button-positive icon-left ion-ios-telephone-outline"
+    href="tel:{{contact['Mobile Phone']}}"
+    >
+    	<b>Call {{contact.Contact}}'s Mobile Phone</b>
+    </a>
+    <a 
+    ng-if="contact.Email" 
+    class="button button-block button-calm icon-left ion-ios-email"
+    href="mailto:{{contact.Email}}"
+    >
+    	<b>Email {{contact.Contact}}</b>
+    </a>
+
   </ion-content>
-</ion-view>
+</ion-view>{{}}

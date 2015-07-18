@@ -14,8 +14,12 @@ angular.module('starter.controllers', [])
   $scope.contacts = Contacts.all()
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+.controller('ChatDetailCtrl', function($scope, $stateParams, Contacts) {
+  $scope.contacts = Contacts.all();
+
+  var contactID = $stateParams.chatId;
+  $scope.contact = $scope.contacts[contactID]; 
+  console.log($scope.contact);
 })
 
 .controller('AccountCtrl', function($scope) {
