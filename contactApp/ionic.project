@@ -1,0 +1,12 @@
+{
+  "name": "contactApp",
+  "app_id": "1918d621",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

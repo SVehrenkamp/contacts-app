@@ -1,0 +1,15 @@
+{
+  "name": "api_server",
+  "version": "1.0.0",
+  "description": "api server for contact app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "svehrenkamp",
+  "license": "ISC",
+  "dependencies": {
+    "csvjson": "^1.0.5",
+    "request": "^2.58.0"
+  }
+}
